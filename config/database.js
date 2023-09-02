@@ -9,7 +9,7 @@ exports.connection = () => {
         await MongoClient.connect("mongodb://localhost:27017", { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
             if (err) console.log("error", err);
             console.log("Database connected");
-            var db = client.db('mongodb-api');
+            var db = client.db('yeshaMarketing');
             resolve(db);
         });
     })

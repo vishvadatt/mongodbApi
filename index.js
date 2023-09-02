@@ -21,6 +21,7 @@ db.connection().then((database) => {
     module.exports = database
     // app.use('/api/auth', require('./routes/auth.route'));
     app.use('/api', require('./routes/user.route'));
+    app.use('/api/Billing', require('./routes/bill.route'));
 
    
     app.listen(port, () => {
